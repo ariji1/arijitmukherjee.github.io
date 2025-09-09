@@ -22,14 +22,16 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Clean install dependencies
         run: |
+          rm -rf node_modules
+          rm -rf dist
+          npm cache clean --force
           npm ci
-          npx vite -v
 
       - name: Build
         run: |
-          npx vite build
+          npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
