@@ -5,7 +5,6 @@ export default {
   plugins: [react()],
   base: '/arijitmukherjee.github.io/',
   build: {
-    outDir: '.',
-    emptyOutDir: false,
+    outDir: 'dist',
   }
 }
