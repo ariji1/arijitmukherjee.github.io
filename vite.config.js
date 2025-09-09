@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 /** @type {import('vite').UserConfig} */
 export default {
   plugins: [react()],
-  base: '/arijitmukherjee.github.io/',
+  base: '/',
   build: {
     outDir: 'dist',
   }
